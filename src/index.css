@@ -9,5 +9,18 @@
 }
 
 .landnav li{
-    @apply px-4 hover:text-white transition duration-500 ease-in-out rounded-md 
+    @apply px-4 hover:text-white transition duration-500 ease-out 
+}
+
+.sidebar li{
+    @apply  text-lg p-2 m-2 w-full text-center ;
+}
+.sidebar{
+    display: none;
+}
+
+@media(max-width:1080px){
+    .sidebar{
+        display: flex;
+    }
 }

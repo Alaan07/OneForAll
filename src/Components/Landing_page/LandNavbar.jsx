@@ -37,6 +37,30 @@ function LandNavbar() {
           </ul>
         </div>
       </nav>
+
+        <div className="text-gray-500  p-4">
+        
+          <ul className="sidebar landnav flex-col absolute  right-0 top-0 min-h-full bg-slate-300 w-[400px] ">
+            <li>
+              <Link to="/">Home</Link>
+            </li>
+            <li>
+              <Link to="/store">Store</Link>
+            </li>
+            <li>
+              <Link to="/about">About</Link>
+            </li>
+            <li>
+              <Link to="/contact">Contact</Link>
+            </li>
+            <li className="px-4">
+              <Link to="/signin">Sign In</Link>
+            </li>
+            <li className="px-4">
+              <Link to="/login">Log In</Link>
+            </li>
+          </ul>
+        </div>
     </div>
   );
 }
