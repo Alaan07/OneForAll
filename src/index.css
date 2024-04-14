@@ -24,7 +24,7 @@
 
 @media(max-width:1080px){
     .SadwitchMenu{
-        display: inline ;
+        display: inline;
     }
     .hide{
         display: none;
@@ -37,3 +37,4 @@
         hight: auto;
     }
 }
+
