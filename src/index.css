@@ -11,6 +11,9 @@
 .landnav li{
     @apply px-4 hover:text-white transition duration-500 ease-out 
 }
+.SadwitchMenu{
+    display:  none;
+}
 
 .sidebar li{
     @apply  text-lg p-2 m-2 w-full text-center ;
@@ -20,7 +23,17 @@
 }
 
 @media(max-width:1080px){
+    .SadwitchMenu{
+        display: inline ;
+    }
+    .hide{
+        display: none;
+    }
+}
+
+@media(max-width:600px){
     .sidebar{
-        display: flex;
+        width: 100%;
+        hight: auto;
     }
 }
