@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import MenuIcon from "@mui/icons-material/Menu";
 import ClearIcon from "@mui/icons-material/Clear";
+import { Translate } from "@mui/icons-material";
 
 function LandNavbar() {
   const [menuToggle, setMenuToggle] = useState(false);
@@ -56,7 +57,7 @@ function LandNavbar() {
 
       <div className="text-gray-500">
         <ul
-          style={menuToggle ? { display: "flex" } : { display: "none" }}
+          style={menuToggle ? { display: "flex"} : { display: "none"}}
           className="sidebar landnav flex-col absolute  right-0 top-0 bg-slate-300 w-[400px] h-screen"
         >
           <li onClick={menuX} className="MenuX">

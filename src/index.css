@@ -6,6 +6,7 @@
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
+    overflow: hidden;
 }
 
 .landnav li{
@@ -34,7 +35,30 @@
 @media(max-width:600px){
     .sidebar{
         width: 100%;
-        hight: auto;
+        max-height: 100%;
     }
+}
+
+.background{
+    width: 100vw;
+    height: 70vh;
+    background-image: url("/svg/wave.svg");
+    background-size:cover;
+    background-repeat: repeat-x;
+}
+.wave{
+    animation: wave 50s linear  infinite;
+
+}
+@keyframes wave{
+    0% { background-position-x: 0px;}
+    25% { background-position-x: -3000px;}
+    50% { background-position-x: 0px;}
+    75% { background-position-x: 3000px;}
+    100% { background-position-x: 0px;}
+}
+.buttonAnimaton:hover{
+    transform: scale(1.1);
+    transition: transform .3s ;
 }
 

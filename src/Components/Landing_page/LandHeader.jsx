@@ -4,7 +4,8 @@ import LandNavbar from "./LandNavbar";
 
 function LandHeader() {
   return (
-    <div className="min-h-screen bg-gray-900">
+    <div className="min-h-screen ">
+    <div className="background wave">
     <LandNavbar />
     <div className="flex flex-col justify-center items-center">
       <div className="flex flex-col items-center max-w-4xl w-full px-6">
@@ -15,8 +16,9 @@ function LandHeader() {
           "Unbeatable deals on everything you need! Shop now and save big on
           our entire collection. Don't miss out!"
         </p>
-        <button className="border m-5 border-gray-500 bg-transparent text-gray-500 rounded-3xl py-2 px-6 hover:bg-green-300 hover:text-black hover:font-bold" ><Link to="/store">Shop now</Link></button>
+        <button className="border buttonAnimaton m-5 border-gray-500 bg-transparent text-gray-500 rounded-3xl py-2 px-6 hover:bg-green-300 hover:text-black hover:font-bold" ><Link to="/store">Shop now</Link></button>
       </div>
+    </div>
     </div>
     </div>
   );
