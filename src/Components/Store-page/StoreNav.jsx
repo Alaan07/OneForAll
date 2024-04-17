@@ -1,11 +1,24 @@
-import React, { useState } from "react";
+import React, {useState} from 'react'
 import { Link } from "react-router-dom";
 import MenuIcon from "@mui/icons-material/Menu";
 import ClearIcon from "@mui/icons-material/Clear";
+import ShoppingBagIcon from '@mui/icons-material/ShoppingBag';
+import PersonIcon from '@mui/icons-material/Person';
+import SearchIcon from '@mui/icons-material/Search';
+import { Padding } from '@mui/icons-material';
 
 
-function LandNavbar() {
-  const [menuToggle, setMenuToggle] = useState(false);
+function StoreNav() {
+    const [menuToggle, setMenuToggle] = useState(false);
+    const [isSearchVisible, setSearchVisible] = useState(false);
+
+  const handleMouseOver = () => {
+    setSearchVisible(true);
+  };
+
+  const handleMouseOut = () => {
+    setSearchVisible(false);
+  };
 
   function toggleMenu() {
     setMenuToggle((prevMenuToggle) => !prevMenuToggle);
@@ -19,11 +32,14 @@ function LandNavbar() {
       <nav className="flex justify-between py-4 px-4 text-lg text-white bg-transparent">
         <div className="text-gray-500 hide">
           <ul className="flex landnav">
-            <li>
-              <Link to="/">Home</Link>
+          <li>
+              <Link to="/">land</Link>
             </li>
             <li>
-              <Link to="/store">Store</Link>
+              <Link to="/store">Home</Link>
+            </li>
+            <li>
+                catagory
             </li>
             <li>
               <Link to="/about">About</Link>
@@ -40,11 +56,20 @@ function LandNavbar() {
 
         <div className="text-gray-500 ">
           <ul className="flex landnav">
-            <li className="px-4 hide">
-              <Link to="/signin">Sign In</Link>
+            <li className="border-2 border-gray-500 hover:border-white rounded-full mx-2 ">
+              <div className="flex" onMouseOver={handleMouseOver} onMouseOut={handleMouseOut}>
+                <div>
+                    <input className={`bg-transparent w-40 border-none ${isSearchVisible ? '' : 'hidden'}`}  type="text" placeholder='Search'/>
+                </div>
+                <button>
+                <SearchIcon/></button>
+              </div>
             </li>
-            <li className="px-4 hide">
-              <Link to="/login">Log In</Link>
+            <li className="hide border-2 border-gray-500 hover:border-white rounded-full mx-2 ">
+              <PersonIcon/>
+            </li>  
+            <li className="hide border-2 border-gray-500 hover:border-white rounded-full mx-2 ">
+            <Link to="/cart"><ShoppingBagIcon/></Link>
             </li>
             <li className="px-4 SadwitchMenu">
               <button onClick={toggleMenu}>
@@ -67,10 +92,7 @@ function LandNavbar() {
             </button>
           </li>
           <li>
-            <Link to="/">Home</Link>
-          </li>
-          <li>
-            <Link to="/store">Store</Link>
+            <Link to="/store">Home</Link>
           </li>
           <li>
             <Link to="/about">About</Link>
@@ -78,16 +100,10 @@ function LandNavbar() {
           <li>
             <Link to="/contact">Contact</Link>
           </li>
-          <li className="px-4">
-            <Link to="/signin">Sign In</Link>
-          </li>
-          <li className="px-4">
-            <Link to="/login">Log In</Link>
-          </li>
         </ul>
       </div>
     </div>
   );
 }
 
-export default LandNavbar;
+export default StoreNav

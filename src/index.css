@@ -20,8 +20,9 @@
     @apply  text-lg p-2 m-2 w-full text-center ;
 }
 .sidebar{
-    display: none;
-}
+    /* display: none; */
+    transform: translateX(400px);
+} 
 
 @media(max-width:1080px){
     .SadwitchMenu{
@@ -30,11 +31,16 @@
     .hide{
         display: none;
     }
+    .LoginSidepart{
+        display: none;
+    }
+    .LoginMainpart{
+        width: 100%;
+    }
 }
 
 @media(max-width:600px){
     .sidebar{
-        width: 100%;
         max-height: 100%;
     }
 }
@@ -61,4 +67,5 @@
     transform: scale(1.1);
     transition: transform .3s ;
 }
+
 
