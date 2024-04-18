@@ -1,10 +1,11 @@
 import React from 'react'
-import LandHeader from './Components/Landing_page/LandHeader'
+import LandingPage from './Components/Landing_page/LandingPage'
+
 
 function App() {
   return (
     <div>
-      <LandHeader />
+      <LandingPage />
     </div>
   )
 }

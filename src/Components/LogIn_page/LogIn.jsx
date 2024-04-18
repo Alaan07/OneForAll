@@ -27,23 +27,18 @@ function LogIn() {
             <h1 className="font-bold text-black text-4xl p-2">Login</h1>
           </div>
           <div className="my-10 w-full">
-            <form method="post" className="flex flex-col items-center">
-              <input
-                type="text"
-                placeholder="Email"
-                className="rounded-xl py-2 px-4 w-[70%] mb-2 h-12 border-none"
-              />
-              <input
-                type="text"
-                placeholder="Password"
-                className="rounded-xl py-2 px-4 w-[70%] mb-2 h-12 border-none"
-              />
+            <form
+              method="post"
+              className=" registerloginform flex flex-col items-center"
+            >
+              <input type="text" placeholder="Email" />
+              <input type="text" placeholder="Password" />
               <button className="buttonAnimaton rounded-xl py-2 px-4 w-[70%] mb-3 h-12 bg-gray-900 text-white font-bold text-lg">
                 Log in
               </button>
             </form>
             <div className="flex flex-col items-end w-[85%]">
-            <p>
+              <p>
                 <Link to="#" className="text-gray-800 hover:text-white">
                   Forgot your password?
                 </Link>

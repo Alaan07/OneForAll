@@ -6,7 +6,7 @@
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
-    overflow: hidden;
+    overflow-x: hidden;
 }
 
 .landnav li{
@@ -68,4 +68,17 @@
     transition: transform .3s ;
 }
 
+.registerloginform input{
+    @apply rounded-xl py-2 px-4 w-[70%] mb-2 h-12 border-none outline-none
+}
 
+.membership{
+    margin: 2% 2%;
+    width: 100%;
+    @apply bg-gray-300 rounded-2xl p-4
+}
+ 
+.membership ol{
+     list-style-type: decimal;
+     padding-left: 3em;
+}
