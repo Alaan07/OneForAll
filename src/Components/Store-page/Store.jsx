@@ -1,10 +1,10 @@
 import React from 'react'
-import StoreNav from './StoreNav'
+import StoreHead from './StoreHead'
 
 function Store() {
   return (
-    <div className=" bg-gray-900 h-screen">
-      <StoreNav/>
+    <div className=" h-screen">
+      <StoreHead/>
     </div>
   )
 }

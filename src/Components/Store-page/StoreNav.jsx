@@ -5,7 +5,6 @@ import ClearIcon from "@mui/icons-material/Clear";
 import ShoppingBagIcon from '@mui/icons-material/ShoppingBag';
 import PersonIcon from '@mui/icons-material/Person';
 import SearchIcon from '@mui/icons-material/Search';
-import { Padding } from '@mui/icons-material';
 
 
 function StoreNav() {
@@ -28,7 +27,7 @@ function StoreNav() {
     setMenuToggle(false);
   }
   return (
-    <div>
+    <div className="bg-gray-900">
       <nav className="flex justify-between py-4 px-4 text-lg text-white bg-transparent">
         <div className="text-gray-500 hide">
           <ul className="flex landnav">
@@ -57,7 +56,7 @@ function StoreNav() {
         <div className="text-gray-500 ">
           <ul className="flex landnav">
             <li className="border-2 border-gray-500 hover:border-white rounded-full mx-2 ">
-              <div className="flex" onMouseOver={handleMouseOver} onMouseOut={handleMouseOut}>
+              <div className="flex searchbtn" onMouseOver={handleMouseOver} onMouseOut={handleMouseOut}>
                 <div>
                     <input className={`bg-transparent w-40 border-none ${isSearchVisible ? '' : 'hidden'}`}  type="text" placeholder='Search'/>
                 </div>

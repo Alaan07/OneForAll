@@ -2,83 +2,175 @@
 @tailwind components;
 @tailwind utilities;
 
-*{
-    margin: 0px;
-    padding: 0px;
-    box-sizing: border-box;
-    overflow-x: hidden;
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  overflow-x: hidden;
 }
 
-.landnav li{
-    @apply px-4 hover:text-white transition duration-500 ease-out 
+.landnav li {
+  @apply px-4 hover:text-white transition duration-500 ease-out;
 }
-.SadwitchMenu{
-    display:  none;
-}
-
-.sidebar li{
-    @apply  text-lg p-2 m-2 w-full text-center ;
-}
-.sidebar{
-    /* display: none; */
-    transform: translateX(400px);
-} 
-
-@media(max-width:1080px){
-    .SadwitchMenu{
-        display: inline;
-    }
-    .hide{
-        display: none;
-    }
-    .LoginSidepart{
-        display: none;
-    }
-    .LoginMainpart{
-        width: 100%;
-    }
+.SadwitchMenu {
+  display: none;
 }
 
-@media(max-width:600px){
-    .sidebar{
-        max-height: 100%;
-    }
+.sidebar li {
+  @apply text-lg p-2 m-2 w-full text-center;
+}
+.sidebar {
+  /* display: none; */
+  transform: translateX(400px);
 }
 
-.background{
-    width: 100vw;
-    height: 70vh;
-    background-image: url("/svg/wave.svg");
-    background-size:cover;
-    background-repeat: repeat-x;
-}
-.wave{
-    animation: wave 50s linear  infinite;
-
-}
-@keyframes wave{
-    0% { background-position-x: 0px;}
-    25% { background-position-x: -3000px;}
-    50% { background-position-x: 0px;}
-    75% { background-position-x: 3000px;}
-    100% { background-position-x: 0px;}
-}
-.buttonAnimaton:hover{
-    transform: scale(1.1);
-    transition: transform .3s ;
-}
-
-.registerloginform input{
-    @apply rounded-xl py-2 px-4 w-[70%] mb-2 h-12 border-none outline-none
-}
-
-.membership{
-    margin: 2% 2%;
+@media (max-width: 1080px) {
+  .SadwitchMenu {
+    display: inline;
+  }
+  .hide {
+    display: none;
+  }
+  .LoginSidepart {
+    display: none;
+  }
+  .LoginMainpart {
     width: 100%;
-    @apply bg-gray-300 rounded-2xl p-4
+  }
 }
- 
-.membership ol{
-     list-style-type: decimal;
-     padding-left: 3em;
+
+@media (max-width: 600px) {
+  .sidebar {
+    max-height: 100%;
+  }
 }
+
+.background {
+  width: 100vw;
+  height: 70vh;
+  background-image: url("/svg/wave.svg");
+  background-size: cover;
+  background-repeat: repeat-x;
+}
+.wave {
+  animation: wave 50s linear infinite;
+}
+@keyframes wave {
+  0% {
+    background-position-x: 0px;
+  }
+  25% {
+    background-position-x: -3000px;
+  }
+  50% {
+    background-position-x: 0px;
+  }
+  75% {
+    background-position-x: 3000px;
+  }
+  100% {
+    background-position-x: 0px;
+  }
+}
+.buttonAnimaton:hover {
+  transform: scale(1.1);
+  transition: transform 0.3s;
+}
+
+.registerloginform input {
+  @apply rounded-xl py-2 px-4 w-[70%] mb-2 h-12 border-none outline-none;
+}
+
+.membership {
+  margin: 2% 2%;
+  width: 100%;
+  @apply bg-gray-300 rounded-2xl p-4;
+}
+
+.membership ol {
+  /* list-style-type: decimal; */
+  padding-left: 3em;
+}
+
+.storeBanner {
+  @apply my-6 mx-2;
+}
+
+.animationBody{
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  place-items: center;
+}
+
+.bgAnimation1 {
+  background-color: gray;
+  z-index: 3;
+  grid-area: 1/1;
+  border-radius: 50%;
+  width: 10vh;
+  height: 10vh;
+  opacity: 0.6;
+  animation: ripple1 4s ease-in-out infinite;
+
+  @apply border-2 border-gray-900;
+}
+@keyframes ripple1 {
+  0% {
+    scale: 1;
+  }
+  50% {
+    scale: 3;
+  }
+  100% {
+    scale: 1;
+  }
+}
+
+.bgAnimation2 {
+    background-color: gray;
+    z-index: 2;
+    grid-area: 1/1;
+    border-radius: 50%;
+    width: 30vh;
+    height: 30vh;
+    opacity: 0.3;
+    animation: ripple2 5s ease-in-out infinite;
+  
+    @apply border-2 border-gray-900;
+  }
+  @keyframes ripple2 {
+    0% {
+      scale: 2;
+    }
+    50% {
+      scale: .5;
+    }
+    100% {
+      scale: 2;
+    }
+  }
+  .bgAnimation3 {
+    background-color: gray;
+    z-index: 1;
+    grid-area: 1/1;
+    border-radius: 50%;
+    width: 20vh;
+    height: 20vh;
+    opacity: 0.4;
+    animation: ripple3 3s ease-in-out infinite;
+  
+    @apply border-2 border-gray-900;
+  }
+  @keyframes ripple3 {
+    0% {
+      scale: 1;
+    }
+    50% {
+        scale: 3;
+      }
+    100% {
+      scale: 1;
+    }
+  }
+  
