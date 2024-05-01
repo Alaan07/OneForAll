@@ -10,6 +10,7 @@ import SearchIcon from '@mui/icons-material/Search';
 function StoreNav() {
     const [menuToggle, setMenuToggle] = useState(false);
     const [isSearchVisible, setSearchVisible] = useState(false);
+    const [isCatVisible, setCatVisible] = useState(false);
 
   const handleMouseOver = () => {
     setSearchVisible(true);
@@ -18,6 +19,10 @@ function StoreNav() {
   const handleMouseOut = () => {
     setSearchVisible(false);
   };
+
+ const visibleCat =() =>{
+    setCatVisible((preisCatVisible) => ! preisCatVisible);
+ }
 
   function toggleMenu() {
     setMenuToggle((prevMenuToggle) => !prevMenuToggle);
@@ -38,7 +43,32 @@ function StoreNav() {
               <Link to="/store">Home</Link>
             </li>
             <li>
-                catagory
+                <div className="relative categorydrop " onClick={visibleCat}>
+                  <p>Category</p>
+                  {console.log(isCatVisible)}
+                </div>
+                <div style={{display: isCatVisible ? "inline" : "none"}} className="dropdownmenu absolute top-15 text-gray-500 bg-gray-900 z-10 p-4">
+                        <ul>
+                            <li>
+                                <p>Camera</p>
+                            </li>
+                            <li>
+                                <p>Fashion</p>
+                            </li>
+                            <li>
+                                <p>SmartPhone</p>
+                            </li>
+                            <li>
+                                <p>Computer</p>
+                            </li>
+                            <li>
+                                <p>TV</p>
+                            </li>
+                            <li>
+                                <p>Furniture</p>
+                            </li>
+                        </ul>
+                    </div>
             </li>
             <li>
               <Link to="/about">About</Link>
@@ -58,7 +88,7 @@ function StoreNav() {
             <li className="border-2 border-gray-500 hover:border-white rounded-full mx-2 ">
               <div className="flex searchbtn" onMouseOver={handleMouseOver} onMouseOut={handleMouseOut}>
                 <div>
-                    <input className={`bg-transparent w-40 border-none ${isSearchVisible ? '' : 'hidden'}`}  type="text" placeholder='Search'/>
+                    <input style={{display: isSearchVisible ? "inline" : "none"}} className="bg-transparent w-40 border-none"  type="text" placeholder='Search'/>
                 </div>
                 <button>
                 <SearchIcon/></button>
@@ -93,6 +123,34 @@ function StoreNav() {
           <li>
             <Link to="/store">Home</Link>
           </li>
+          <li>
+                <div className="relative categorydrop " onClick={visibleCat}>
+                  <p>Category</p>
+                  {console.log(isCatVisible)}
+                </div>
+                <div style={{display: isCatVisible ? "inline" : "none"}} className="text-gray-500 ">
+                        <ul>
+                            <li>
+                                <p>Camera</p>
+                            </li>
+                            <li>
+                                <p>Fashion</p>
+                            </li>
+                            <li>
+                                <p>SmartPhone</p>
+                            </li>
+                            <li>
+                                <p>Computer</p>
+                            </li>
+                            <li>
+                                <p>TV</p>
+                            </li>
+                            <li>
+                                <p>Furniture</p>
+                            </li>
+                        </ul>
+                    </div>
+            </li>
           <li>
             <Link to="/about">About</Link>
           </li>

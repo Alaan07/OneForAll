@@ -108,8 +108,8 @@
   z-index: 3;
   grid-area: 1/1;
   border-radius: 50%;
-  width: 10vh;
-  height: 10vh;
+  width: 20vh;
+  height: 20vh;
   opacity: 0.6;
   animation: ripple1 4s ease-in-out infinite;
 
@@ -132,8 +132,8 @@
     z-index: 2;
     grid-area: 1/1;
     border-radius: 50%;
-    width: 30vh;
-    height: 30vh;
+    width: 35vh;
+    height: 35vh;
     opacity: 0.3;
     animation: ripple2 5s ease-in-out infinite;
   
@@ -155,8 +155,8 @@
     z-index: 1;
     grid-area: 1/1;
     border-radius: 50%;
-    width: 20vh;
-    height: 20vh;
+    width: 25vh;
+    height: 25vh;
     opacity: 0.4;
     animation: ripple3 3s ease-in-out infinite;
   
@@ -173,4 +173,35 @@
       scale: 1;
     }
   }
+  .AnimationItem{
+    z-index: 100;
+    grid-area: 1/1;
+    width: 60%;
+    height: 60%;
+    animation: storeItem 4s ease-in-out infinite;
+  }
+
+  @keyframes storeItem{
+    0%{
+      transform: translateY(0);
+      
+    }
+    50%{
+      transform: translateY(40px);
+    }
+    100%{
+      transform: translateY(0);
+    }
+  }
   
+  .dropdownmenu{
+    display: none;
+    @apply rounded-xl
+  }
+  .dropdownmenu  li {
+    padding-bottom: 8px;
+  }
+  
+  .categorydrop:hover .dropdownmenu{
+    display: block;
+  }

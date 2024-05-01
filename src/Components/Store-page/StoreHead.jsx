@@ -28,6 +28,9 @@ function StoreHead() {
                 <div className="bgAnimation1"></div>
                 <div className="bgAnimation2"></div>
                 <div className="bgAnimation3 "></div>
+                <div className="AnimationItem">
+                    <img src="/public/image/landing_banner_image/mpuse.png" alt="" />
+                </div>
             </div> 
         </div>
         </div>
