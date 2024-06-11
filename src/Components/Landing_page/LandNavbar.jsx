@@ -57,7 +57,6 @@ function LandNavbar() {
 
       <div className="text-gray-500">
         <ul
-          // style={menuToggle ? { display: "flex"} : { display: "none"}}  just in case if the trasformations doesnt work
           style={menuToggle ? {transform: "translateX(0)", transitionDuration:".3s" } : {transform: "translateX(400px)", transitionDuration:".3s" }}
           className="sidebar landnav flex-col absolute  right-0 top-0 bg-slate-300 w-[400px] h-screen"
         >

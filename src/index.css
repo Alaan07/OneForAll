@@ -6,7 +6,8 @@
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
-  overflow-x: hidden;
+  overflow-x:hidden;
+  
 }
 
 .landnav li {
@@ -21,6 +22,7 @@
 }
 .sidebar {
   /* display: none; */
+  z-index: 10000;
   transform: translateX(400px);
 }
 
@@ -205,3 +207,7 @@
   .categorydrop:hover .dropdownmenu{
     display: block;
   }
+.itemsection{
+  overflow-y: auto;
+  overflow-x: hidden;
+}
